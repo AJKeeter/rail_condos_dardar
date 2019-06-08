@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'pages/home'
+  get 'pages/about'
   # custom routes
   get "home", to: "pages#home"
   get "about", to: "pages#about"
