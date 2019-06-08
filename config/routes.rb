@@ -1,34 +1,25 @@
 Rails.application.routes.draw do
 
-  get 'pages/home'
-  get 'pages/about'
-  # custom routes
-  get "home", to: "pages#home"
-  get "about", to: "pages#about"
-  get "contact_us", to: "pages#contact_us"
-  get "residents", to: "pages#residents"
-  get "events", to: "pages#events"
-  get "announcements", to: "pages#announcements"
-  get "error", to: "pages#error"
+  #Custom Devise Routes
 
+
+  # RESTful Routes Generators
+
+
+  # Match Routes
+  match "home", to: "pages#home", via: 'get'
+  match "about", to: "pages#about", via: 'get'
+  match "contact_us", to: "pages#contact_us", via: 'get'
+  match "residents", to: "pages#residents", via: 'get'
+  match "events", to: "pages#events", via: 'get'
+  match "announcements", to: "pages#announcements", via: 'get'
+  match "error", to: "pages#error", via: 'get'
+
+  # Root Route
   root "pages#home"
 
 
 
-
-
-
-
-
-
-
-
-
-
-
   # catch all route
-
   get "*path", to: redirect("/error")
-
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
