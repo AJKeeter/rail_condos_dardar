@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :facilities
   resources :events
   resources :buildings
   resources :units

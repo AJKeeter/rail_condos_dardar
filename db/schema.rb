@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_09_231230) do
+ActiveRecord::Schema.define(version: 2019_06_09_231413) do
 
   create_table "buildings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "number_of_units"
@@ -29,6 +29,20 @@ ActiveRecord::Schema.define(version: 2019_06_09_231230) do
     t.string "event_name"
     t.text "event_description"
     t.string "event_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "facilities", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "address"
+    t.string "address_2"
+    t.string "city"
+    t.string "state"
+    t.integer "zip"
+    t.string "location"
+    t.text "location_information"
+    t.string "closing_time"
+    t.string "opening_time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
