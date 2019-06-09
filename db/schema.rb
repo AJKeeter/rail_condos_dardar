@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_09_225822) do
+ActiveRecord::Schema.define(version: 2019_06_09_230648) do
 
   create_table "service_requests", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "type_of_request"
@@ -22,6 +22,19 @@ ActiveRecord::Schema.define(version: 2019_06_09_225822) do
   create_table "suggestions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "enter_suggestion"
     t.text "enter_complaint"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "units", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "number_of_unit"
+    t.integer "units_available"
+    t.string "unit_price"
+    t.text "unit_description"
+    t.float "number_of_bathrooms"
+    t.integer "number_of_rooms"
+    t.string "sq_footage"
+    t.string "pet_friendly"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

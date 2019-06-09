@@ -1,0 +1,57 @@
+<%= form_with(model: unit, local: true) do |form| %>
+  <% if unit.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(unit.errors.count, "error") %> prohibited this unit from being saved:</h2>
+
+      <ul>
+      <% unit.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :number_of_unit %>
+    <%= form.text_field :number_of_unit %>
+  </div>
+
+  <div class="field">
+    <%= form.label :units_available %>
+    <%= form.number_field :units_available %>
+  </div>
+
+  <div class="field">
+    <%= form.label :unit_price %>
+    <%= form.text_field :unit_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :unit_description %>
+    <%= form.text_area :unit_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :number_of_bathrooms %>
+    <%= form.text_field :number_of_bathrooms %>
+  </div>
+
+  <div class="field">
+    <%= form.label :number_of_rooms %>
+    <%= form.number_field :number_of_rooms %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sq_footage %>
+    <%= form.text_field :sq_footage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pet_friendly %>
+    <%= form.text_field :pet_friendly %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
