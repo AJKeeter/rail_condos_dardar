@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Enter suggestion:</strong>
+  <%= @suggestion.enter_suggestion %>
+</p>
+
+<p>
+  <strong>Enter complaint:</strong>
+  <%= @suggestion.enter_complaint %>
+</p>
+
+<%= link_to 'Edit', edit_suggestion_path(@suggestion) %> |
+<%= link_to 'Back', suggestions_path %>

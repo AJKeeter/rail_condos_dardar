@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :suggestions
   resources :service_requests
   #Custom Devise Routes
 
